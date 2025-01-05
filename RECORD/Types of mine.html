@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing Exercise</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h2 {
+            color: #4a90e2;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        ul, ol {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            padding: 20px;
+            list-style-position: inside;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        ul[type="square"] {
+            background: #ffe0e6;
+            border: 2px solid #ff6f91;
+        }
+
+        ul[type="circle"] {
+            background: #e6f7ff;
+            border: 2px solid #4a90e2;
+        }
+
+        ul li, ol li {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 18px;
+            color: #444;
+            background: #f9f9f9;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        ul li:hover, ol li:hover {
+            background: #ffd9e8;
+        }
+
+        ul[type="disc"] {
+            list-style-type: disc;
+        }
+
+        ul li[type="disc"] {
+            color: #d14285;
+        }
+
+        ul li[type="circle"] {
+            list-style-type: circle;
+        }
+
+        ol {
+            counter-reset: list-counter;
+        }
+
+        ol[type="A"] li::before {
+            content: counter(list-counter, upper-alpha) ". ";
+            counter-increment: list-counter;
+            color: #2c9f67;
+        }
+
+        ol[type="a"] li::before {
+            content: counter(list-counter, lower-alpha) ". ";
+            counter-increment: list-counter;
+            color: #ff7f50;
+        }
+
+        ol[type="I"] li::before {
+            content: counter(list-counter, upper-roman) ". ";
+            counter-increment: list-counter;
+            color: #6a0dad;
+        }
+
+        ol li {
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>My Wish List</h2>
+    <p>
+        <ul type="square">
+            <li>I want to be rich</li>
+            <li>Meet with Austin Butler</li>
+            <li>Travel with my best friend</li>
+        </ul>
+    </p>
+    <p>
+        <ul type="circle">
+            <li>Fulfil my parents' wants</li>
+            <li>Meet with Olivia Rodrigo</li>
+            <li>I want to become a famous model</li>
+        </ul>
+    </p>
+
+    <h2>Favourite Games</h2>
+    <p>
+        <ul>
+            <li type="disc">Mobile Legends</li>
+            <li type="circle">Dynamons World</li>
+            <li type="square">Among Us</li>
+        </ul>
+    </p>
+
+    <h2>Countries to Visit</h2>
+    <p>
+        <ol>
+            <li>United States</li>
+            <li>United Kingdom</li>
+            <li>France</li>
+            <li>Japan</li>
+            <li>Spain</li>
+            <li>Italy</li>
+        </ol>
+    </p>
+    <p>
+        <ol type="A">
+            <li>Korea</li>
+            <li>Austria</li>
+            <li>Brazil</li>
+            <li>Albania</li>
+            <li>Finland</li>
+            <li>Germany</li>
+        </ol>
+    </p>
+
+    <h2>My Pets' Names</h2>
+    <p>
+        <ol type="a" start="7">
+            <li>Yogi</li>
+            <li>Whitley</li>
+            <li>Whasley</li>
+            <li>Friyie</li>
+            <li>Antoniuol</li>
+            <li>Kiraki</li>
+        </ol>
+    </p>
+    <p>
+        <ol type="I">
+            <li value="7">Ariuol</li>
+            <li value="15">Mistagio</li>
+            <li value="18">Roidey</li>
+        </ol>
+    </p>
+</body>
+</html>
